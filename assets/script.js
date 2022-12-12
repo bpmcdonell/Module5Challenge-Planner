@@ -9,12 +9,102 @@ function displayDate() {
   function repeat() {
     var rightNow = dayjs().format("dddd, MMMM D YYYY, h:mm:ss a");
     currentDay.text(rightNow);
-    console.log(rightNow);
   }
   repeat();
   setInterval(repeat, 1000);
 }
 displayDate();
+
+//function to change color of time blocks based on time of day
+//is there a more efficient way to do this? I feel like there is a better way to do this but I can't figure it out.
+function changeColor() {
+  var currentHour = dayjs().format("HH");
+  if (currentHour > 9) {
+    $("#hour-9").addClass("past");
+  }
+  if (currentHour === 9) {
+    $("#hour-9").addClass("present");
+  }
+  if (currentHour < 9) {
+    $("#hour-9").addClass("future");
+  }
+  if (currentHour > 10) {
+    $("#hour-10").addClass("past");
+  }
+  if (currentHour === 10) {
+    $("#hour-10").addClass("present");
+  }
+  if (currentHour < 10) {
+    $("#hour-10").addClass("future");
+  }
+  if (currentHour > 11) {
+    $("#hour-11").addClass("past");
+  }
+  if (currentHour === 11) {
+    $("#hour-11").addClass("present");
+  }
+  if (currentHour < 11) {
+    $("#hour-11").addClass("future");
+  }
+  if (currentHour > 12) {
+    $("#hour-12").addClass("past");
+  }
+  if (currentHour === 12) {
+    $("#hour-12").addClass("present");
+  }
+  if (currentHour < 12) {
+    $("#hour-12").addClass("future");
+  }
+  if (currentHour > 13) {
+    $("#hour-13").addClass("past");
+  }
+  if (currentHour === 13) {
+    $("#hour-13").addClass("present");
+  }
+  if (currentHour < 13) {
+    $("#hour-13").addClass("future");
+  }
+  if (currentHour > 14) {
+    $("#hour-14").addClass("past");
+  }
+  if (currentHour === 14) {
+    $("#hour-14").addClass("present");
+  }
+  if (currentHour < 14) {
+    $("#hour-14").addClass("future");
+  }
+  if (currentHour > 15) {
+    $("#hour-15").addClass("past");
+  }
+  if (currentHour === 15) {
+    $("#hour-15").addClass("present");
+  }
+  if (currentHour < 15) {
+    $("#hour-15").addClass("future");
+  }
+  if (currentHour > 16) {
+    $("#hour-16").addClass("past");
+  }
+  if (currentHour === 16) {
+    $("#hour-16").addClass("present");
+  }
+  if (currentHour < 16) {
+    $("#hour-16").addClass("future");
+  }
+  if (currentHour > 17) {
+    $("#hour-17").addClass("past");
+  }
+  if (currentHour === 17) {
+    $("#hour-17").addClass("present");
+  }
+  if (currentHour < 17) {
+    $("#hour-17").addClass("future");
+  }
+}
+changeColor();
+
+//function to save user input to local storage
+addEventListener("click", function (event) {});
 
 $(function () {
   // TODO: Add a listener for click events on the save button. This code should
